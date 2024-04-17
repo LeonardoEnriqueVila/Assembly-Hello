@@ -1,0 +1,24 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Ensamblar",
+            "type": "shell",
+            "command": "nasm",
+            "args": [
+                "-f",
+                "win64",
+                "-o",
+                "${fileDirname}\\${fileBasenameNoExtension}.obj",
+                "${file}"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [],
+            "detail": "Compila el archivo assembly usando NASM."
+        }
+    ]
+}
+
